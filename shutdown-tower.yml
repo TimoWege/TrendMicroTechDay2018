@@ -1,7 +1,0 @@
----
-- hosts: localhost
-  gather_facts: no
-  tasks:
-    - name: shutdown
-      command: sudo /sbin/shutdown -h now
-      delegate_to: localhost
