@@ -3,5 +3,5 @@
   gather_facts: no
   tasks:
     - name: shutdown
-      command: /sbin/shutdown -h now
+      command: sudo /sbin/shutdown -h now
       delegate_to: localhost
