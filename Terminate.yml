@@ -1,7 +1,7 @@
 ---
     
 - name: Terminate tagged instances
-  hosts: tag_Role_Database
+  hosts: tag_Name_TechDay_Database, tag_Name_TechDay_Reverse_Proxy, tag_Name_TechDay_Webserver
   tasks:
     - ec2_metadata_facts:
     - ec2:
