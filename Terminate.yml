@@ -4,6 +4,10 @@
   hosts: tag_Role_Database
   connection: local
   tasks:
+    - name: Print all variables for each remote device
+      debug: 
+        var: hostvars[ec2_id]
+  
     - name: Terminate instances that were previously launched
       ec2:
         state: 'absent'
