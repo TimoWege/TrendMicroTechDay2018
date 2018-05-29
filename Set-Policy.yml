@@ -1,10 +1,10 @@
 ---
 
-- hosts: tag_Name_TechDay_Database
+- hosts: tag_Name_TechDay_Webserver
   roles:
     - role: deep-security-ansible
-      action: set-policy
-      policy: TechDay - Database
+      action: set-policyid
+      policy: 861
 
     - role: deep-security-ansible
       action: update-configuration
