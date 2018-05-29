@@ -1,0 +1,24 @@
+- name: Create instances
+  hosts: localhost
+  gather_facts: False
+  tasks:
+
+  - name: Get the variables
+    include_vars:
+      dir: vars/
+
+  - name: Create EC2 Instance
+    ec2:   
+      key_name: "{{ aws_ssh_key }}"
+      region: "{{ aws_region }}"
+      instance_type: "{{ aws_instance_type }}"
+      user_data: |
+                 #!/bin/sh
+                 echo "{{ ansible_ssh_pub }}" > /root/.ssh/authorized_keys
+                 apt install -y python python-simplejson
+      image: "{{ aws_instance_ami }}"
+      wait: true
+      count: 2
+      group_id: "{{ aws_security_groups }}"
+      vpc_subnet_id: "{{ aws_vpc_subnet_id }}"    
+      instance_tags: '{"Name":"TechDay Database","Role":"Database"}'
