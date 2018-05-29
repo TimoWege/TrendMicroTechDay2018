@@ -1,0 +1,18 @@
+#
+# Vars
+#
+
+# Ansible SSH public key
+
+ansible_ssh_pub: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3tU8XpEuQ+SX5DjdXizRColE/WBDFqS9q+l50FC58ynEjjxqNjnFl1tK8mY2AdtiSDiIQyJf00cull+HDyZHkbPD+ifAhXH5YNX06tBBto75/TL6lusMBXakOR/MiyBrIKUeXbEvubCUUG4c9OyOABVeCqXMDJAV5V/FGjFscuA+/bac47l+zWdVYefkDFem/wQN8UUfHpnWgH07BebvuV2IC7mAjwoaBBnCklGiJgtDUNZhPWdOl7aQtrDyFbhSBSYkO6lCQmm+RGYztCpt3UFonBNuBd3A5GhmoVtBTAF+WSIdmu+Ciav7MkGaKc/h9ivQjUBxpN4gnwE1df7BP ansible-server
+
+# AWS vars
+
+aws_instance_ami: ami-7c412f13
+aws_vpc_subnet_id: subnet-82bc9be9
+aws_region: eu-central-1
+aws_instance_type: t2.micro
+aws_security_groups: ['sg-73663b1e', 'sg-1165387c']
+aws_ssh_key: TM-AWS-AccessKey
+
+aws_instance_tags: '{"Name":"TestServer"}'
