@@ -11,7 +11,6 @@
       name: postgresql
       state: present
       
----
 - hosts: web
   tasks:
   - name: Update repositories cache if the last one is more than 3600 seconds ago
@@ -24,7 +23,6 @@
       name: apache2
       state: present     
       
----
 - hosts: tag_Name_TechDay_Reverse_Proxy
   tasks:
   - name: Update repositories cache if the last one is more than 3600 seconds ago
