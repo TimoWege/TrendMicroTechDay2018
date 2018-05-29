@@ -17,7 +17,7 @@
                  echo "{{ ansible_ssh_pub }}" > /root/.ssh/authorized_keys
                  apt install -y python python-simplejson
       image: "{{ aws_instance_ami }}"
-      wait: true
+      wait: false
       count: "{{ item.count }}"
       group_id: "{{ aws_security_groups }}"
       vpc_subnet_id: "{{ aws_vpc_subnet_id }}"    
