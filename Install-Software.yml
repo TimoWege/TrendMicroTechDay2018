@@ -1,5 +1,6 @@
 ---
 - hosts: tag_Name_TechDay_Database
+  gather_facts: False
   tasks:
   - name: Update repositories cache if the last one is more than 3600 seconds ago
     apt:
@@ -11,7 +12,8 @@
       name: postgresql
       state: present
       
-- hosts: web
+- hosts: tag_Name_TechDay_Webserver
+  gather_facts: False
   tasks:
   - name: Update repositories cache if the last one is more than 3600 seconds ago
     apt:
@@ -24,6 +26,7 @@
       state: present     
       
 - hosts: tag_Name_TechDay_Reverse_Proxy
+  gather_facts: False
   tasks:
   - name: Update repositories cache if the last one is more than 3600 seconds ago
     apt:
