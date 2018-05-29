@@ -18,7 +18,11 @@
                  apt install -y python python-simplejson
       image: "{{ aws_instance_ami }}"
       wait: true
-      count: 2
+      count: "{{ item.count }}"
       group_id: "{{ aws_security_groups }}"
       vpc_subnet_id: "{{ aws_vpc_subnet_id }}"    
-      instance_tags: '{"Name":"TechDay Database","Role":"Database"}'
+      instance_tags: '{"Name":"TechDay "{{ item.role }}"","Role":"{{ item.role }}"}'        
+    loop:
+      - { role: 'Database', count: 2 }
+      - { role: 'Webserver', count: 2 }
+      - { role: 'Reverse Proxy', count: 4 }
