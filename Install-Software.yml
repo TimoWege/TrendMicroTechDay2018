@@ -12,16 +12,17 @@
       apt:
         name: postgresql
         state: present
+        
   roles:
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: set-policy
       policy: TechDay - Database
 
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: update-configuration
 
-    - role: deep-security.deep-security-agent
-      action: run-recommendation-scans      
+    - role: deep-security-ansible
+      action: run-recommendation-scans     
 
 - name: Install software on Web Servers
   hosts: tag_Name_TechDay_Webserver
@@ -37,15 +38,15 @@
         state: present   
         
   roles:
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: set-policy
       policy: TechDay - Webserver
 
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: update-configuration
 
-    - role: deep-security.deep-security-agent
-      action: run-recommendation-scans      
+    - role: deep-security-ansible
+      action: run-recommendation-scans 
 
 - name: Install software on reverse proxys
   hosts: tag_Name_TechDay_Reverse_Proxy
@@ -61,12 +62,12 @@
         state: present     
         
   roles:
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: set-policy
       policy: TechDay - Reverse Proxy
 
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: update-configuration
 
-    - role: deep-security.deep-security-agent
-      action: run-recommendation-scans      
+    - role: deep-security-ansible
+      action: run-recommendation-scans    
