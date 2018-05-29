@@ -1,23 +1,19 @@
 ---
 - hosts: tag_Name_TechDay_Database, tag_Name_TechDay_Reverse_Proxy, tag_Name_TechDay_Webserver
-  pre_tasks: 
-    - name: Get the variables
-      include_vars:
-        dir: vars/
-
   roles:
     - role: deep-security.deep-security-agent
       action: deploy
+      #DSaaS
+      tenant_id: "{{ ds_tenant_id }}"
+      tenant_password: "{{ ds_tenant_password }}"
+      token: "{{ ds_token }}"      
+      force_reactivation: true
+
+
+
+
+       #DS on premise
 #      dsm_agent_download_hostname: cetl-dsm-10.ceur-testlab.trendmicro.de
 #      dsm_agent_download_port: 4119
 #      dsm_agent_activation_hostname: cetl-dsm-10.ceur-testlab.trendmicro.de
 #      dsm_agent_activation_port: 4120
-
-      #DSaaS
-      tenant_id: "{{ ds_tenant_id }}"
-      tenant_password: "{{ ds_tenant_password }}"
-      token: "{{ ds_token }}"
-
-      policy_id: 662
-      group_id: 5661
-      force_reactivation: true
