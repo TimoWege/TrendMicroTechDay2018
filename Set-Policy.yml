@@ -2,38 +2,38 @@
 - name: "Set policy for webservers"
   hosts: tag_Name_TechDay_Webserver
   roles:
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: set-policy
       policy: TechDay - Webserver
 
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: update-configuration
 
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: run-recommendation-scans
       
 - name: "Set policy for reverse proxys"
   hosts: tag_Name_TechDay_Reverse_Proxy
   roles:
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: set-policy
       policy: TechDay - Reverse Proxy
 
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: update-configuration
 
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: run-recommendation-scans
 
 - name: "Set policy for databases"
   hosts: tag_Name_TechDay_Database
   roles:
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: set-policy
       policy: TechDay - Database
 
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: update-configuration
 
-    - role: deep-security.deep-security-agent
+    - role: deep-security-ansible
       action: run-recommendation-scans
