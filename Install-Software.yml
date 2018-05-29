@@ -11,6 +11,16 @@
     apt:
       name: postgresql
       state: present
+  roles:
+    - role: deep-security.deep-security-agent
+      action: set-policy
+      policy: TechDay - Database
+
+    - role: deep-security.deep-security-agent
+      action: update-configuration
+
+    - role: deep-security.deep-security-agent
+      action: run-recommendation-scans      
       
 - hosts: tag_Name_TechDay_Webserver
   gather_facts: False
@@ -23,7 +33,17 @@
   - name: Install the latest version of "apache2"
     apt:
       name: apache2
-      state: present     
+      state: present   
+  roles:
+    - role: deep-security.deep-security-agent
+      action: set-policy
+      policy: TechDay - Webserver
+
+    - role: deep-security.deep-security-agent
+      action: update-configuration
+
+    - role: deep-security.deep-security-agent
+      action: run-recommendation-scans      
       
 - hosts: tag_Name_TechDay_Reverse_Proxy
   gather_facts: False
@@ -36,4 +56,14 @@
   - name: Install the latest version of "nginx"
     apt:
       name: nginx
-      state: present      
+      state: present     
+  roles:
+    - role: deep-security.deep-security-agent
+      action: set-policy
+      policy: TechDay - Reverse Proxy
+
+    - role: deep-security.deep-security-agent
+      action: update-configuration
+
+    - role: deep-security.deep-security-agent
+      action: run-recommendation-scans      
