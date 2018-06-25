@@ -38,7 +38,7 @@
         state: present   
         
   roles:
-    - role: deep-security.deep-security-agent
+    - role: dsansible
       action: set-policy-by-id
       policy_id: 663
 
