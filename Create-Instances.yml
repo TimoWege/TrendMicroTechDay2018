@@ -1,6 +1,7 @@
 - name: Create instances
   hosts: localhost
   gather_facts: False
+  deprecation_warnings: False
   tasks:
 
   - name: Get the variables
