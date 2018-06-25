@@ -14,7 +14,7 @@
         state: present     
         
   roles:
-    - role: deep-security.deep-security-agent
+    - role: dsansible
       policy_name: TechDay - Reverse Proxy
       action: set-policy-by-name      
 
