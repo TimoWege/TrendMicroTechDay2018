@@ -14,14 +14,14 @@
         state: present
         
   roles:
-    - role: deep-security.deep-security-ansible
+    - role: deep-security.deep-security-agent
       action: set-policy-by-name
       policy_name: TechDay - Database
 
-    - role: deep-security.deep-security-ansible
+    - role: deep-security.deep-security-agent
       action: update-configuration
 
-    - role: deep-security.deep-security-ansible
+    - role: deep-security.deep-security-agent
       action: run-recommendation-scans     
 
 - name: Install software on Web Servers
@@ -38,14 +38,14 @@
         state: present   
         
   roles:
-    - role: deep-security.deep-security-ansible
+    - role: deep-security.deep-security-agent
       action: set-policy-by-id
       policy_id: 663
 
-    - role: deep-security.deep-security-ansible
+    - role: deep-security.deep-security-agent
       action: update-configuration
 
-    - role: deep-security.deep-security-ansible
+    - role: deep-security.deep-security-agent
       action: run-recommendation-scans 
 
 - name: Install software on reverse proxys
@@ -62,12 +62,12 @@
         state: present     
         
   roles:
-    - role: deep-security.deep-security-ansible
+    - role: deep-security.deep-security-agent
       action: set-policy-by-name
       policy_name: TechDay - Reverse Proxy
 
-    - role: deep-security.deep-security-ansible
+    - role: deep-security.deep-security-agent
       action: update-configuration
 
-    - role: deep-security.deep-security-ansible
+    - role: deep-security.deep-security-agent
       action: run-recommendation-scans    
