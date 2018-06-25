@@ -14,9 +14,9 @@
         state: present
         
   roles:
-    - role: deep-security.deep-security-agent
-      policy_name: TechDay - Database
+    - role: deep-security.deep-security-agent      
       action: set-policy-by-name
+      policy_name: "TechDay - Database"
 
     - role: deep-security.deep-security-agent
       action: update-configuration
