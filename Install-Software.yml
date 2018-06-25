@@ -1,25 +1,8 @@
 ---
 
 - name: Install software on reverse proxys
-  hosts: tag_Name_TechDay_Reverse_Proxy
-  pre_tasks:
-    - name: Update repositories cache if the last one is more than 3600 seconds ago
-      apt:
-        update_cache: yes
-        cache_valid_time: 3600
-
-    - name: Install the latest version of "nginx"
-      apt:
-        name: nginx
-        state: present     
-        
+  hosts: tag_Name_TechDay_Reverse_Proxy 
   roles:
-    #- role: deep-security.deep-security-agent
-    #  policy_name: TechDay - Reverse Proxy
-    #  action: set-policy-by-name      
-
-    - role: deep-security.deep-security-agent
-      action: update-configuration
-
-    - role: deep-security.deep-security-agent
-      action: run-recommendation-scans    
+    - role: dsansible
+      policy_name: TechDay - Reverse Proxy
+      action: set-policy-by-name      
