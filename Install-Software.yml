@@ -38,9 +38,9 @@
         state: present   
         
   roles:
-    - role: dsansible
-      action: set-policy-by-id
-      policy_id: 663
+    #- role: dsansible
+    #  action: set-policy-by-id
+    #  policy_id: 663
 
     - role: deep-security.deep-security-agent
       action: update-configuration
