@@ -3,6 +3,6 @@
 - name: Install software on reverse proxys
   hosts: tag_Name_TechDay_Reverse_Proxy 
   roles:
-    - role: dsansible
+    - role: deep-security.deep-security-agent
       policy_name: TechDay - Reverse Proxy
       action: set-policy-by-name      
