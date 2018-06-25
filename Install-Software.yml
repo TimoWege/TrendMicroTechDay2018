@@ -63,8 +63,8 @@
         
   roles:
     - role: deep-security.deep-security-agent
-      action: set-policy-by-name
       policy_name: TechDay - Reverse Proxy
+      action: set-policy-by-name      
 
     - role: deep-security.deep-security-agent
       action: update-configuration
