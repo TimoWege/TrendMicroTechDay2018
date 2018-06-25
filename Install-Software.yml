@@ -15,14 +15,14 @@
         
   roles:
     - role: deep-security.deep-security-agent
-        action: set-policy-by-name
-        policy_name: TechDay - Database
+      policy_name: TechDay - Database
+      action: set-policy-by-name
 
     - role: deep-security.deep-security-agent
-        action: update-configuration
+      action: update-configuration
 
     - role: deep-security.deep-security-agent
-        action: run-recommendation-scans     
+       action: run-recommendation-scans     
 
 - name: Install software on Web Servers
   hosts: tag_Name_TechDay_Webserver
