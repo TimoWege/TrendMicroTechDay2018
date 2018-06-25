@@ -14,9 +14,9 @@
         state: present
         
   roles:
-    - role: deep-security.deep-security-agent
-      policy_name: TechDay - Database
-      action: set-policy-by-name
+    #- role: deep-security.deep-security-agent
+    #  policy_name: TechDay - Database
+    #  action: set-policy-by-name
 
     - role: deep-security.deep-security-agent
       action: update-configuration
@@ -62,9 +62,9 @@
         state: present     
         
   roles:
-    - role: deep-security.deep-security-agent
-      policy_name: TechDay - Reverse Proxy
-      action: set-policy-by-name      
+    #- role: deep-security.deep-security-agent
+    #  policy_name: TechDay - Reverse Proxy
+    #  action: set-policy-by-name      
 
     - role: deep-security.deep-security-agent
       action: update-configuration
