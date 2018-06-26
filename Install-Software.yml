@@ -7,6 +7,9 @@
     - role: deep-security.deep-security-agent      
       action: set-policy-by-name
       policy_name: "TechDay - Database"
+    
+    - role: deep-security.deep-security-agent
+      action: update-configuration
    
 
 - name: Install software on Web Servers
@@ -16,6 +19,9 @@
     - role: deep-security.deep-security-agent
       action: set-policy-by-id
       policy_id: 663
+      
+    - role: deep-security.deep-security-agent
+      action: update-configuration      
 
 - name: Install software on reverse proxys
   hosts: tag_Name_TechDay_Reverse_Proxy    
@@ -25,8 +31,8 @@
       policy_name: TechDay - Reverse Proxy
       action: set-policy-by-name      
 
-    #- role: deep-security.deep-security-agent
-    #  action: update-configuration
+    - role: deep-security.deep-security-agent
+      action: update-configuration
 
     #- role: deep-security.deep-security-agent
     #  action: run-recommendation-scans    
