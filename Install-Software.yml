@@ -6,7 +6,7 @@
   roles:
    
     - role: deep-security.deep-security-agent
-      operation: update-configuration
+      action: update-configuration
     
     #- role: deep-security.deep-security-agent
     #  action: run-recommendation-scans           
