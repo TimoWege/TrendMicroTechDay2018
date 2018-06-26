@@ -1,18 +1,18 @@
 ---
 
-#- name: Install software on reverse proxys
-#  hosts: tag_Name_TechDay_Reverse_Proxy 
-#  roles:
-#    - role: deep-security.deep-security-agent
-#      policy_name: TechDay - Reverse Proxy
-#      action: set-policy-by-name    
+- name: Install software on reverse proxys
+  hosts: tag_Name_TechDay_Reverse_Proxy 
+  roles:
+    - role: deep-security.deep-security-agent
+      policy_name: TechDay - Reverse Proxy
+      action: set-policy-by-name    
       
-#- name: Install software on DB Servers
-#  hosts: tag_Name_TechDay_Database 
-#  roles:
-#    - role: deep-security.deep-security-agent      
-#      action: set-policy-by-name
-#      policy_name: "TechDay - Database"
+- name: Install software on DB Servers
+  hosts: tag_Name_TechDay_Database 
+  roles:
+    - role: deep-security.deep-security-agent      
+      action: set-policy-by-name
+      policy_name: "TechDay - Database"
       
 #- name: Install software on Web Servers
 #  hosts: tag_Name_TechDay_Webserver      
