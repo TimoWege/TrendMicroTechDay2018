@@ -11,8 +11,8 @@
     #- role: deep-security.deep-security-agent
     #  action: update-configuration
     
-    - role: deep-security.deep-security-agent
-      action: run-recommendation-scans           
+    #- role: deep-security.deep-security-agent
+    #  action: run-recommendation-scans           
 
 - name: Install software on Web Servers
   hosts: tag_Name_TechDay_Webserver
@@ -25,7 +25,7 @@
     #- role: deep-security.deep-security-agent
     #  action: update-configuration      
 
-    - role: deep-security.deep-security-agent
+    #- role: deep-security.deep-security-agent
       action: run-recommendation-scans    
 
 - name: Install software on reverse proxys
@@ -39,5 +39,5 @@
     #- role: deep-security.deep-security-agent
     #  action: update-configuration
 
-    - role: deep-security.deep-security-agent
-      action: run-recommendation-scans    
+    #- role: deep-security.deep-security-agent
+    #  action: run-recommendation-scans    
