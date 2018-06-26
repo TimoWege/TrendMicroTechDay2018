@@ -2,7 +2,7 @@
 - hosts: tag_Name_TechDay_Database, tag_Name_TechDay_Reverse_Proxy, tag_Name_TechDay_Webserver
   roles:
     - role: deep-security.deep-security-agent
-      action: deploy
+      operation: deploy
       #DSaaS
       tenant_id: "{{ ds_tenant_id }}"
       tenant_password: "{{ ds_tenant_password }}"
