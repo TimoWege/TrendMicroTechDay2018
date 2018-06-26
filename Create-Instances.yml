@@ -24,6 +24,6 @@
       vpc_subnet_id: "{{ aws_vpc_subnet_id }}"    
       instance_tags: '{"Name":"TechDay {{ item.role }}","Role":"{{ item.role }}"}'        
     loop:
-      - { role: 'Database', count: 2 }
+      - { role: 'Database', count: 1 }
       - { role: 'Webserver', count: 2 }
-      - { role: 'Reverse Proxy', count: 4 }
+      - { role: 'Reverse Proxy', count: 2 }
