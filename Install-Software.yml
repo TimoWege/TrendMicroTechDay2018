@@ -26,7 +26,7 @@
     #  action: update-configuration      
 
     #- role: deep-security.deep-security-agent
-      action: run-recommendation-scans    
+    #  action: run-recommendation-scans    
 
 - name: Install software on reverse proxys
   hosts: tag_Name_TechDay_Reverse_Proxy    
