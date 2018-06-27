@@ -25,5 +25,5 @@
       instance_tags: '{"Name":"TechDay {{ item.role }}","Role":"{{ item.role }}"}'        
     loop:
       - { role: 'Database', count: 1 }
-      - { role: 'Webserver', count: 2 }
-      - { role: 'Reverse Proxy', count: 2 }
+      #- { role: 'Webserver', count: 2 }
+      #- { role: 'Reverse Proxy', count: 2 }
