@@ -6,8 +6,9 @@
       #DSaaS
       tenant_id: "{{ ds_tenant_id }}"
       tenant_password: "{{ ds_tenant_password }}"
-      token: "{{ ds_token }}"      
+      token: "{{ ds_token }}"
       force_reactivation: true
+      policy_name: "wpad"
 
 
 
