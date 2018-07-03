@@ -1,4 +1,4 @@
 #- src: deep-security.deep-security-agent
 - src: https://github.com/PhilippBehmer/ansible
   version: master
-  name: dsansible
+  name: deep-security.deep-security-agent
