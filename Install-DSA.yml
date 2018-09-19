@@ -9,13 +9,13 @@
       tenant_password: "{{ ds_tenant_password }}"
       token: "{{ ds_token }}"
       force_reactivation: true
-      policy_name: "TechDay - general"
-
+#      policy_name: "TechDay - general"
+      policy_name: "Base Policy"
 
 
 
        #DS on premise
-#      dsm_agent_download_hostname: cetl-dsm-10.ceur-testlab.trendmicro.de
-#      dsm_agent_download_port: 4119
-#      dsm_agent_activation_hostname: cetl-dsm-10.ceur-testlab.trendmicro.de
-#      dsm_agent_activation_port: 4120
+      dsm_agent_download_hostname: dsm.ceur-testlab.trendmicro.de
+      dsm_agent_download_port: 4119
+      dsm_agent_activation_hostname: dsm.ceur-testlab.trendmicro.de
+      dsm_agent_activation_port: 4120
