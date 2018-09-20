@@ -17,7 +17,7 @@
   roles:
     - role: deep-security.deep-security-agent
       operation: set-policy-by-name
-      policy_name: "[PB] Linux Server"
+      policy_name: "[AnsibleDemo] Database Servers"
 
     - role: deep-security.deep-security-agent
       operation: update-configuration
@@ -42,7 +42,7 @@
   roles:
     - role: deep-security.deep-security-agent
       operation: set-policy-by-id
-      policy_id: 42
+      policy_id: 52
 
     - role: deep-security.deep-security-agent
       operation: update-configuration
@@ -66,7 +66,7 @@
 
   roles:
     - role: deep-security.deep-security-agent
-      policy_name: "[PB] Linux Server"
+      policy_name: "[AnsibleDemo] Reverse Proxys"
       operation: set-policy-by-name
 
     - role: deep-security.deep-security-agent
