@@ -10,7 +10,7 @@
       token: ""
       force_reactivation: true
 #      policy_name: "TechDay - general"
-      policy_name: "Base Policy"
+      policy_name: "[AnsibleDemo] Base policy"
 
 
 
