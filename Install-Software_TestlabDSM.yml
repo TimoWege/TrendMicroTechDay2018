@@ -1,7 +1,7 @@
 ---
 
 - name: Install software on DB Servers
-  hosts: tag_Name_TechDay_Database
+  hosts: tag_Name_AnsibleDemo_Database
 
   pre_tasks:
     - name: Update repositories cache if the last one is more than 3600 seconds ago
@@ -26,7 +26,7 @@
       operation: run-recommendation-scans
 
 - name: Install software on Web Servers
-  hosts: tag_Name_TechDay_Webserver
+  hosts: tag_Name_AnsibleDemo_Webserver
 
   pre_tasks:
     - name: Update repositories cache if the last one is more than 3600 seconds ago
@@ -51,7 +51,7 @@
       operation: run-recommendation-scans
 
 - name: Install software on reverse proxys
-  hosts: tag_Name_TechDay_Reverse_Proxy
+  hosts: tag_Name_AnsibleDemo_Reverse_Proxy
 
   pre_tasks:
     - name: Update repositories cache if the last one is more than 3600 seconds ago

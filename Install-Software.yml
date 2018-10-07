@@ -1,8 +1,8 @@
 ---
 
 - name: Install software on DB Servers
-  hosts: tag_Name_TechDay_Database
-  
+  hosts: tag_Name_AnsibleDemo_Database
+
   pre_tasks:
     - name: Update repositories cache if the last one is more than 3600 seconds ago
       apt:
@@ -13,21 +13,21 @@
       apt:
         name: postgresql
         state: present
-        
+
   roles:
-    - role: deep-security.deep-security-agent      
+    - role: deep-security.deep-security-agent
       operation: set-policy-by-name
-      policy_name: "TechDay - Database"      
-    
+      policy_name: "AnsibleDemo - Database"
+
     - role: deep-security.deep-security-agent
       operation: update-configuration
-    
+
     - role: deep-security.deep-security-agent
-      operation: run-recommendation-scans           
+      operation: run-recommendation-scans
 
 - name: Install software on Web Servers
-  hosts: tag_Name_TechDay_Webserver
-  
+  hosts: tag_Name_AnsibleDemo_Webserver
+
   pre_tasks:
     - name: Update repositories cache if the last one is more than 3600 seconds ago
       apt:
@@ -37,22 +37,22 @@
     - name: Install the latest version of "apache2"
       apt:
         name: apache2
-        state: present  
-  
+        state: present
+
   roles:
     - role: deep-security.deep-security-agent
       operation: set-policy-by-id
       policy_id: 663
-      
-    - role: deep-security.deep-security-agent
-      operation: update-configuration      
 
     - role: deep-security.deep-security-agent
-      operation: run-recommendation-scans    
+      operation: update-configuration
+
+    - role: deep-security.deep-security-agent
+      operation: run-recommendation-scans
 
 - name: Install software on reverse proxys
-  hosts: tag_Name_TechDay_Reverse_Proxy   
-  
+  hosts: tag_Name_AnsibleDemo_Reverse_Proxy
+
   pre_tasks:
     - name: Update repositories cache if the last one is more than 3600 seconds ago
       apt:
@@ -62,15 +62,15 @@
     - name: Install the latest version of "nginx"
       apt:
         name: nginx
-        state: present 
+        state: present
 
   roles:
     - role: deep-security.deep-security-agent
-      policy_name: TechDay - Reverse Proxy
-      operation: set-policy-by-name      
+      policy_name: AnsibleDemo - Reverse Proxy
+      operation: set-policy-by-name
 
     - role: deep-security.deep-security-agent
       operation: update-configuration
 
     - role: deep-security.deep-security-agent
-      operation: run-recommendation-scans    
+      operation: run-recommendation-scans
