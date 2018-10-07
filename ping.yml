@@ -1,6 +1,6 @@
 ---
 
-- hosts: tag_Name_AnsibleDemo_Database, tag_AnsibleDemo_TechDay_Reverse_Proxy, tag_AnsibleDemo_TechDay_Webserver
+- hosts: tag_Name_AnsibleDemo_Database, tag_Name_AnsibleDemo_Reverse_Proxy, tag_Name_AnsibleDemo_Webserver
   gather_facts: false
   tasks:
     - ping:
