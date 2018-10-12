@@ -42,7 +42,7 @@
   roles:
     - role: deep-security.deep-security-agent
       operation: set-policy-by-id
-      policy_id: 663
+      policy_id: 603
 
     - role: deep-security.deep-security-agent
       operation: update-configuration
