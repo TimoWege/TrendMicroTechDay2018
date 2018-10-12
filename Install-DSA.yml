@@ -9,7 +9,7 @@
       tenant_password: "{{ ds_tenant_password }}"
       token: "{{ ds_token }}"
       force_reactivation: true
-      policy_name: "TechDay - general"
+      policy_name: "[AnsibleDemo] Base policy"
 #      policy_name: "Base Policy"
 
 
