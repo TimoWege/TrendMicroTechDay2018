@@ -14,6 +14,6 @@ aws_vpc_subnet_id: subnet-01fd5c1dbf5772984
 aws_region: eu-central-1
 aws_instance_type: t2.micro
 aws_security_groups: ['sg-0096607bb2dc9d793', 'sg-0e74bb462c5e64ac5']
-aws_ssh_key: TM-AWS-AccessKey
+aws_ssh_key: twege@aws
 
 aws_instance_tags: '{"Name":"TestServer"}'
