@@ -4,15 +4,16 @@
 
 # Ansible SSH public key
 
-ansible_ssh_pub: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3tU8XpEuQ+SX5DjdXizRColE/WBDFqS9q+l50FC58ynEjjxqNjnFl1tK8mY2AdtiSDiIQyJf00cull+HDyZHkbPD+ifAhXH5YNX06tBBto75/TL6lusMBXakOR/MiyBrIKUeXbEvubCUUG4c9OyOABVeCqXMDJAV5V/FGjFscuA+/bac47l+zWdVYefkDFem/wQN8UUfHpnWgH07BebvuV2IC7mAjwoaBBnCklGiJgtDUNZhPWdOl7aQtrDyFbhSBSYkO6lCQmm+RGYztCpt3UFonBNuBd3A5GhmoVtBTAF+WSIdmu+Ciav7MkGaKc/h9ivQjUBxpN4gnwE1df7BP ansible-server
+ansible_ssh_pub: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQChUbJc8FPrfqHyIX2ea1/I11305IvWvf0e4vX4tqBRsCRjnwRRhN6R/iWV1x1L1MFTzu6H1oOfK5By1p0U/WP9mMYjepOBQyeIeuo4ygHgXrbz917PEZAebAY+lC5R6k0T9yIIjgNjv5bymBAbWHRgnvHpY8+5PqSyEUxx/frsbLsAl4Qq1t+W4AhPzlb6pdViEPVvJ0CHkVEApyujBAuwApUxcBzp8jkPPCkLxwv+5qpWk0mzMT5QDC8TRmDqNAc8YxWO0pX1XITyBE4GyjzDpBCYvj6hA5y7rlDWH+YLx0SLJiKdkHFHlonMmSVxHySYwuheAu9kH9RC/c5ULMUD twege@aws
 
 # AWS vars
 
 aws_instance_ami: ami-7c412f13
-aws_vpc_subnet_id: subnet-82bc9be9
+#aws_instance_ami: ami-0bdf93799014acdc4
+aws_vpc_subnet_id: subnet-01fd5c1dbf5772984
 aws_region: eu-central-1
 aws_instance_type: t2.micro
-aws_security_groups: ['sg-73663b1e', 'sg-1165387c']
-aws_ssh_key: TM-AWS-AccessKey
+aws_security_groups: ['sg-0096607bb2dc9d793', 'sg-0e74bb462c5e64ac5']
+#aws_ssh_key: TM-AWS-AccessKey
 
 aws_instance_tags: '{"Name":"TestServer"}'
